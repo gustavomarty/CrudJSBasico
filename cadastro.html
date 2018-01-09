@@ -20,15 +20,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                <a class="navbar-brand" href="index.html">Demo</a>
                 </div>
                 <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
                     <li><a href="lista.html">Lista</a></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a class="active" href="cadastro.html">Cadastro</a></li>
                     <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -47,20 +44,29 @@
         </nav>
 
         <div role="main">
-
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <label>Nome: </label>
                 <input class="form-control" type="text" id="txtNome">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <label>E-mail: </label>
                 <input class="form-control" type="text" id="txtEmail">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <label>Telefone: </label>
                 <input class="form-control" type="text" id="txtTelefone">
             </div>
+            
+            <button onclick="cadastrar();"> CADASTRAR </button>
+
+            
+
         </div>
+
+        Resultado:
+        <div id="resultado" class="col-md-12">
+
+            </div>
 
     </body>
 
