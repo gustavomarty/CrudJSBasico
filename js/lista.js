@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 function listarPessoas()
 {
+    $("#tableItens").html('');
+
     data.pessoas.forEach(item => {
         var newRow = $("<tr>");		   
         var cols = "";		
@@ -15,21 +17,16 @@ function listarPessoas()
         cols += '<button onclick="AlterarPessoa(\'' + item.id + '\');" type="button" class="btn btn-success">Editar</button>';		    
         cols += '</td>';	        	
         cols += '<td>';		    
-        cols += '<button onclick="RemoveTableRow(this)" type="button" class="btn btn-danger">Remover</button>';		    
+        cols += '<button onclick="RemoverPessoa(\'' + item.id + '\');" type="button" class="btn btn-danger">Remover</button>';		    
         cols += '</td>';	
         newRow.append(cols);
         $("#tableItens").append(newRow);     
     });
 }
 
-RemoveTableRow = function(handler) {
-    var tr = $(handler).closest('tr');
-
-    tr.fadeOut(400, function(){ 
-      tr.remove(); 
-    }); 
-
-    return false;
+function RemoverPessoa(id) {
+    data.removerPessoa(id);
+    listarPessoas();
   };
 
 

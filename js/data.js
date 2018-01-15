@@ -2,7 +2,7 @@ var data = {
     pessoas: {},
     inserirPessoa: _inserirPessoa,
     alterarPessoa: _alterarPessoa,
-    inativarPessoa: _inativarPessoa,
+    removerPessoa: _removerPessoa,
     retornarPessoaPorId: _retornarPessoaPorId
 };
 
@@ -40,8 +40,10 @@ function _retornarPessoaPorId(id)
     return pessoa[0];
 }
 
-function _inativarPessoa(id)
+function _removerPessoa(id)
 {
-
+    var index = data.pessoas.findIndex(pessoa => pessoa.id == id);
+    data.pessoas.splice(index, 1 );
+    localStorage.setItem("data", JSON.stringify(data.pessoas));
 }
 
