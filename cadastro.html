@@ -2,7 +2,8 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <script src="js/javascript.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/cadastro.js"></script>
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -39,7 +40,7 @@
                     </ul>
                     </li>
                 </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </nav>
 
@@ -57,16 +58,11 @@
                 <input class="form-control" type="text" id="txtTelefone">
             </div>
             
-            <button onclick="cadastrar();"> CADASTRAR </button>
-
-            
+            <div class="col-md-12">
+                <button type="button" style="width: 90%; margin: 20px;" class="btn btn-primary" onclick="cadastrar();"> CADASTRAR </button>
+            </div>
 
         </div>
-
-        Resultado:
-        <div id="resultado" class="col-md-12">
-
-            </div>
 
     </body>
 
